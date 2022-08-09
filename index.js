@@ -7,7 +7,7 @@ const STORAGE_FILE = "storage.json";
 const ATTACHMENT_FILE = "attachment.pdf";
 
 const credentials = JSON.parse(fs.readFileSync('credentials.json'));
-const senders = fs.readFileSync('senders.txt', "utf-8").replace(/[,;]?\s+/, " ").split(" ");
+const senders = fs.readFileSync('senders.txt', "utf-8").replace(/[,;]?\s+/g, " ").split(" ");
 
 console.log("Allowed senders (senders.txt):", senders);
 
